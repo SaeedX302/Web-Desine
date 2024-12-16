@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&display=swap');
+
+*{
+	margin: 0;
+	padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.container .card{
+    position: relative;
+    width: 300px;
+    height: 400px;
+    background: #fff;
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+.container .card::before{
+    content: '';
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 0 20px var(--i),
+    0 0 0 30px #fff,
+    0 0 0 35px #333;
+    transition: 0.5s;
+    transition-delay: 0.5s;
+}
+.container .card:hover::before{
+    width: 0;
+    height: 0;
+    box-shadow: 0 0 0 400px var(--i);
+    transition-delay: 0.5s;
+}
+.container .card i{
+    position: relative;
+    z-index: 1;
+    transition: 0.5s;
+    transition-delay: 0.5s;
+    font-size: 4em;
+    color: var(--i);
+}
+.container .card:hover i{
+    color: #fff;
+    transition-delay: 0s;
+}
+.container .card h2{
+    position: absolute;
+    top: 30px;
+    transition: 0.5s;
+    transform: translateY(-70px);
+    color: #fff;
+    font-weight: 500;
+    transition-delay: 0.25s;
+}
+.container .card:hover h2{
+    transform: translateY(0);
+    transition-delay: 1s;
+}
+.container .card a{
+    position: absolute;
+    bottom: 30px;
+    transform: translateY(70px);
+    display: inline-block;
+    transition: 0.5s;
+    color: #333;
+    background: #fff;
+    padding: 8px 15px;
+    font-weight: 600;
+    border-radius: 6px;
+    text-decoration: none;
+}
+.container .card:hover a{
+    transform: translateY(0);
+    transition-delay: 0.75s;
+}
